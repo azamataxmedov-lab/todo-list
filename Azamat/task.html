@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Task Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <header>
+            <div class="header-top">
+                <h1><i class="fa-solid fa-sparkles"></i> Taskify</h1>
+                <button id="themeToggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <p>Your premium personal productivity hub</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="taskInput" placeholder="What needs to be done?">
+                <select id="categorySelect">
+                    <option value="Work">💼 Work</option>
+                    <option value="Personal" selected>🏠 Personal</option>
+                    <option value="Study">📚 Study</option>
+                </select>
+            </div>
+            <button id="addBtn"><i class="fa-solid fa-plus"></i> Add Task</button>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="footer">
+            <span id="counterText">0 items left</span>
+            <button id="clearCompletedBtn">Clear Completed</button>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
